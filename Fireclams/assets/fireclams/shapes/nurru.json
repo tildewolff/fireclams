@@ -1,44 +1,71 @@
 {
-	"editor": {
-		"backDropShape": "",
-		"collapsedPaths": "",
-		"allAngles": false,
-		"entityTextureMode": false,
-		"singleTexture": false,
-		"vsFormatConverted": false
-	},
-	"textureWidth": 8,
-	"textureHeight": 8,
-	"textureSizes": {
-		"kallu.png": [16, 16],
-		"silver.png": [8, 8]
-	},
-	"textures": {
-		"kallu.png": "block/creature/seashell/plain",
-		"silver.png": ""
-	},
-	"elements": [
-		{
-			"name": "cube",
-			"from": [7.25, 0, 7.25],
-			"to": [8.75, 1.5, 8.75],
-			"rotationOrigin": [7.25, 0, 7.25],
-			"uv": [0, 0],
-			"shade": true,
-			"faces": {
-				"north": {"texture": "#silver.png", "uv": [3, 5, 6, 8], "autoUv": false, "snapUv": false},
-				"east": {"texture": "#silver.png", "uv": [3, 3, 6, 6], "autoUv": false, "snapUv": false},
-				"south": {"texture": "#silver.png", "uv": [0, 3, 3, 6], "autoUv": false, "snapUv": false},
-				"west": {"texture": "#silver.png", "uv": [3, 0, 6, 3], "autoUv": false, "snapUv": false},
-				"up": {"texture": "#silver.png", "uv": [0, 0, 3, 3], "autoUv": false, "snapUv": false},
-				"down": {"texture": "#silver.png", "uv": [0, 5, 3, 8], "autoUv": false, "snapUv": false}
-			},
-			"stepParentName": "",
-			"climateColorMap": "",
-			"gradientShade": false,
-			"renderPass": 0,
-			"seasonColorMap": ""
-		}
-	],
-	"animations": []
+  "editor": {
+    "backDropShape": "",
+    "collapsedPaths": "",
+    "allAngles": false,
+    "entityTextureMode": false,
+    "singleTexture": false,
+    "vsFormatConverted": false
+  },
+  "textureWidth": 8,
+  "textureHeight": 8,
+  "textureSizes": {
+    "nurru": [8, 8]
+  },
+  "textures": {
+    "nurru": "nurru/pearl"
+  },
+  "elements": [
+    {
+      "name": "nurrupearl",
+      "from": [7.25, 0, 7.25],
+      "to": [8.75, 1.5, 8.75],
+      "rotationOrigin": [7.25, 0, 7.25],
+      "uv": [0, 0],
+      "shade": true,
+      "faces": {
+        "north": {
+          "texture": "#nurru",
+          "uv": [3, 5, 6, 8],
+          "autoUv": false,
+          "snapUv": false
+        },
+        "east": {
+          "texture": "#nurru",
+          "uv": [3, 3, 6, 6],
+          "autoUv": false,
+          "snapUv": false
+        },
+        "south": {
+          "texture": "#nurru",
+          "uv": [0, 3, 3, 6],
+          "autoUv": false,
+          "snapUv": false
+        },
+        "west": {
+          "texture": "#nurru",
+          "uv": [3, 0, 6, 3],
+          "autoUv": false,
+          "snapUv": false
+        },
+        "up": {
+          "texture": "#nurru",
+          "uv": [0, 0, 3, 3],
+          "autoUv": false,
+          "snapUv": false
+        },
+        "down": {
+          "texture": "#nurru",
+          "uv": [0, 5, 3, 8],
+          "autoUv": false,
+          "snapUv": false
+        }
+      },
+      "climateColorMap": "",
+      "gradientShade": false,
+      "renderPass": 0,
+      "seasonColorMap": ""
+    }
+  ],
+  "animations": []
 }
