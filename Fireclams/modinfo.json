@@ -1,13 +1,13 @@
 {
     "type": "code",
-    "modid": "mymodid",
-    "name": "My Template Mod",
+    "modid": "fireclams",
+    "name": "Fireclams",
     "authors": [
         "Unknown"
     ],
-    "description": "To be added",
-    "version": "1.0.0",
+    "description": "Grow metal-colored nurru pearls in reusable giant clams.",
+    "version": "1.0.1",
     "dependencies": {
-        "game": ""
+        "game": "1.22.0"
     }
 }

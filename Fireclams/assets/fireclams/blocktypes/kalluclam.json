@@ -1,76 +1,48 @@
 {
   "code": "kalluclam",
-  "class": "BlockBarrel",
-  "entityClass": "Barrel",
-  "behaviors": [{ "name": "Lockable" }, { "name": "UnstableFalling" }],
-  "shape": { "base": "block/wood/barrel/empty" },
-  "creativeinventory": { "general": ["*"], "decorative": ["*"] },
-  "blockmaterial": "Wood",
-  "replaceable": 900,
-  "resistance": 1.5,
-  "maxStackSize": 1,
-  "lightAbsorption": 1,
+  "class": "Fireclam",
+  "entityClass": "Fireclam",
+  "variantgroups": [
+    { "code": "shell", "states": ["plain", "turquoise", "seafoam", "latte", "darkpurple", "clay", "cinnamon"] },
+    { "code": "stage", "states": ["empty", "processing", "ready"] },
+    { "code": "metal", "states": ["pearl", "gold", "silver", "electrum", "blackbronze", "nickel", "meteoriciron", "copper", "uranium"] }
+  ],
+  "skipVariants": [
+    "*-empty-gold", "*-empty-silver", "*-empty-electrum", "*-empty-blackbronze",
+    "*-empty-nickel", "*-empty-meteoriciron", "*-empty-copper", "*-empty-uranium",
+    "*-processing-pearl", "*-ready-pearl"
+  ],
+  "shapeByType": {
+    "*-empty-*": { "base": "clam-open-empty" },
+    "*-processing-*": { "base": "clam-closed" },
+    "*-ready-*": { "base": "clam-open" }
+  },
   "textures": {
-    "lid": { "base": "block/wood/barrel/lid" }
+    "kallu": { "base": "kallu/{shell}" },
+    "nurru": { "base": "nurru/{metal}" }
+  },
+  "creativeinventoryByType": {
+    "*-empty-pearl": { "general": ["*"], "decorative": ["*"] },
+    "*": {}
   },
   "attributes": {
-    "reinforcable": true,
-    "partialAttachable": true,
-    "capacityLitres": 50,
-    "openSound": {
-      "path": "block/barrelopen",
-      "pitch": { "avg": 1.0, "var": 0.25 }
-    },
-    "closeSound": {
-      "path": "block/barrelclose",
-      "pitch": { "avg": 1.0, "var": 0.25 }
-    }
+    "handbook": { "groupBy": ["kalluclam-{shell}-*"] }
   },
-  "sideao": {
-    "all": false
-  },
-  "sidesolid": {
-    "all": false
-  },
-  "emitsideao": {
-    "all": false
-  },
-  "sideopaque": {
-    "all": false
-  },
-  "collisionbox": {
-    "x1": 0,
-    "y1": 0,
-    "z1": 0,
-    "x2": 1,
-    "y2": 0.9375,
-    "z2": 1
-  },
-  "selectionbox": {
-    "x1": 0,
-    "y1": 0,
-    "z1": 0,
-    "x2": 1,
-    "y2": 0.9375,
-    "z2": 1
-  },
-  "combustibleProps": {
-    "burnTemperature": 600,
-    "burnDuration": 20
-  },
+  "blockmaterial": "Stone",
+  "replaceable": 600,
+  "resistance": 1.5,
+  "maxStackSize": 16,
+  "lightAbsorption": 0,
+  "renderPass": "OpaqueNoCull",
+  "sideao": { "all": false },
+  "sidesolid": { "all": false },
+  "emitsideao": { "all": false },
+  "sideopaque": { "all": false },
+  "collisionbox": { "x1": 0.0625, "y1": 0, "z1": 0.0625, "x2": 0.9375, "y2": 0.5, "z2": 0.9375 },
+  "selectionbox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.875, "z2": 1 },
   "sounds": {
-    "place": "block/planks",
-    "hit": "block/planks",
-    "break": "block/planks",
-    "walk": "walk/wood"
-  },
-  "materialDensity": 600,
-  "heldTpIdleAnimation": "holdbothhandslarge",
-  "heldRightReadyAnimation": "heldblockready",
-  "heldTpUseAnimation": "twohandplaceblock",
-  "tpHandTransform": {
-    "translation": { "x": -1.7, "y": -0.95, "z": -0.69 },
-    "rotation": { "x": 12, "y": 14, "z": -81 },
-    "scale": 0.36
+    "place": "block/stone",
+    "hit": "block/stone",
+    "break": "block/stone"
   }
 }
