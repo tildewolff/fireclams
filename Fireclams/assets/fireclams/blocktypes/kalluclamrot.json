@@ -1,0 +1,214 @@
+﻿{
+    "code":  "kalluclamrot",
+    "class":  "Fireclam",
+    "entityClass":  "Fireclam",
+    "variantgroups":  [
+                          {
+                              "code":  "shell",
+                              "states":  [
+                                             "plain",
+                                             "turquoise",
+                                             "seafoam",
+                                             "latte",
+                                             "darkpurple",
+                                             "clay",
+                                             "cinnamon"
+                                         ]
+                          },
+                          {
+                              "code":  "stage",
+                              "states":  [
+                                             "empty",
+                                             "processing",
+                                             "ready"
+                                         ]
+                          },
+                          {
+                              "code":  "metal",
+                              "states":  [
+                                             "pearl",
+                                             "gold",
+                                             "silver",
+                                             "electrum",
+                                             "blackbronze",
+                                             "nickel",
+                                             "meteoriciron",
+                                             "copper",
+                                             "uranium"
+                                         ]
+                          },
+                          {
+                              "code":  "side",
+                              "loadFromProperties":  "abstract/horizontalorientation"
+                          }
+                      ],
+    "shapeByType":  {
+                        "*-empty-*-north":  {
+                                                "base":  "clam-open-empty",
+                                                "rotateY":  0
+                                            },
+                        "*-empty-*-east":  {
+                                               "base":  "clam-open-empty",
+                                               "rotateY":  270
+                                           },
+                        "*-empty-*-south":  {
+                                                "base":  "clam-open-empty",
+                                                "rotateY":  180
+                                            },
+                        "*-empty-*-west":  {
+                                               "base":  "clam-open-empty",
+                                               "rotateY":  90
+                                           },
+                        "*-processing-*-north":  {
+                                                     "base":  "clam-closed",
+                                                     "rotateY":  0
+                                                 },
+                        "*-processing-*-east":  {
+                                                    "base":  "clam-closed",
+                                                    "rotateY":  270
+                                                },
+                        "*-processing-*-south":  {
+                                                     "base":  "clam-closed",
+                                                     "rotateY":  180
+                                                 },
+                        "*-processing-*-west":  {
+                                                    "base":  "clam-closed",
+                                                    "rotateY":  90
+                                                },
+                        "*-ready-*-north":  {
+                                                "base":  "clam-open",
+                                                "rotateY":  0
+                                            },
+                        "*-ready-*-east":  {
+                                               "base":  "clam-open",
+                                               "rotateY":  270
+                                           },
+                        "*-ready-*-south":  {
+                                                "base":  "clam-open",
+                                                "rotateY":  180
+                                            },
+                        "*-ready-*-west":  {
+                                               "base":  "clam-open",
+                                               "rotateY":  90
+                                           }
+                    },
+    "textures":  {
+                     "kallu":  {
+                                   "base":  "kallu/{shell}"
+                               },
+                     "nurru":  {
+                                   "base":  "nurru/{metal}"
+                               }
+                 },
+    "creativeinventoryByType":  {
+                                    "*-empty-pearl-north":  {
+                                                                "general":  [
+                                                                                "*"
+                                                                            ],
+                                                                "decorative":  [
+                                                                                   "*"
+                                                                               ]
+                                                            },
+                                    "*":  {
+
+                                          }
+                                },
+    "attributes":  {
+                       "handbook":  {
+                                        "groupBy":  [
+                                                        "kalluclamrot-{shell}-*"
+                                                    ]
+                                    }
+                   },
+    "blockmaterial":  "Stone",
+    "replaceable":  600,
+    "resistance":  1.5,
+    "maxStackSize":  16,
+    "lightAbsorption":  0,
+    "renderPass":  "OpaqueNoCull",
+    "sideao":  {
+                   "all":  false
+               },
+    "sidesolid":  {
+                      "all":  false
+                  },
+    "emitsideao":  {
+                       "all":  false
+                   },
+    "sideopaque":  {
+                       "all":  false
+                   },
+    "collisionbox":  {
+                         "x1":  0.0625,
+                         "y1":  0,
+                         "z1":  0.0625,
+                         "x2":  0.9375,
+                         "y2":  0.5,
+                         "z2":  0.9375
+                     },
+    "selectionbox":  {
+                         "x1":  0,
+                         "y1":  0,
+                         "z1":  0,
+                         "x2":  1,
+                         "y2":  0.875,
+                         "z2":  1
+                     },
+    "sounds":  {
+                   "place":  "block/stone",
+                   "hit":  "block/stone",
+                   "break":  "block/stone"
+               },
+    "guiTransform":  {
+                         "rotation":  {
+                                          "x":  -46,
+                                          "y":  -129,
+                                          "z":  -11
+                                      },
+                         "origin":  {
+                                        "x":  0.5,
+                                        "y":  0.11,
+                                        "z":  0.5
+                                    },
+                         "scale":  3.04
+                     },
+    "allowedVariants":  [
+                            "*-empty-pearl-*",
+                            "kalluclamrot-clay-processing-gold-*",
+                            "kalluclamrot-clay-ready-gold-*",
+                            "kalluclamrot-clay-processing-silver-*",
+                            "kalluclamrot-clay-ready-silver-*",
+                            "kalluclamrot-clay-processing-electrum-*",
+                            "kalluclamrot-clay-ready-electrum-*",
+                            "kalluclamrot-clay-processing-blackbronze-*",
+                            "kalluclamrot-clay-ready-blackbronze-*",
+                            "kalluclamrot-clay-processing-nickel-*",
+                            "kalluclamrot-clay-ready-nickel-*",
+                            "kalluclamrot-clay-processing-meteoriciron-*",
+                            "kalluclamrot-clay-ready-meteoriciron-*",
+                            "kalluclamrot-clay-processing-copper-*",
+                            "kalluclamrot-clay-ready-copper-*",
+                            "kalluclamrot-clay-processing-uranium-*",
+                            "kalluclamrot-clay-ready-uranium-*",
+                            "kalluclamrot-plain-processing-pearl-*",
+                            "kalluclamrot-plain-ready-pearl-*",
+                            "kalluclamrot-turquoise-processing-pearl-*",
+                            "kalluclamrot-turquoise-ready-pearl-*",
+                            "kalluclamrot-seafoam-processing-pearl-*",
+                            "kalluclamrot-seafoam-ready-pearl-*",
+                            "kalluclamrot-latte-processing-pearl-*",
+                            "kalluclamrot-latte-ready-pearl-*",
+                            "kalluclamrot-darkpurple-processing-pearl-*",
+                            "kalluclamrot-darkpurple-ready-pearl-*",
+                            "kalluclamrot-cinnamon-processing-pearl-*",
+                            "kalluclamrot-cinnamon-ready-pearl-*"
+                        ],
+    "behaviors":  [
+                      {
+                          "name":  "HorizontalOrientable",
+                          "properties":  {
+                                             "handleDrop":  false
+                                         }
+                      }
+                  ]
+}

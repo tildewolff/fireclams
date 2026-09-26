@@ -36,9 +36,9 @@ public class BlockEntityFireclam : BlockEntity
         base.GetBlockInfo(forPlayer, dsc);
         if (Block is not BlockFireclam clam) return;
         string stage = clam.Variant["stage"];
-        if ((stage == "empty" || stage == "processing") && !clam.HasRequiredLiquid(Api.World, Pos))
+        if ((stage == "empty" || stage == "processing") && !clam.HasRequiredMedium(Api.World, Pos))
         {
-            dsc.AppendLine(Lang.Get(clam.Variant["shell"] == "clay" ? "fireclams:needs-lava" : "fireclams:needs-water"));
+            dsc.AppendLine(Lang.Get(clam.Variant["shell"] == "clay" ? "fireclams:needs-adjacent-lava" : "fireclams:needs-saltwater"));
         }
         if (stage != "processing" || readyAtHour <= 0) return;
 
@@ -56,7 +56,7 @@ public class BlockEntityFireclam : BlockEntity
         // Keep existing worlds usable if a non-clay clam was already growing a metal pearl.
         if (shell != "clay" && stage != "empty" && clam.Variant["metal"] != "pearl")
         {
-            Block regular = Api.World.GetBlock(new AssetLocation("fireclams", $"kalluclam-{shell}-{stage}-pearl"));
+            Block regular = clam.GetState(Api.World, stage, "pearl");
             if (regular is BlockFireclam regularClam)
             {
                 Api.World.BlockAccessor.ExchangeBlock(regular.BlockId, Pos);
@@ -68,7 +68,7 @@ public class BlockEntityFireclam : BlockEntity
         if (stage != "processing") return;
 
         double now = Api.World.Calendar.TotalHours;
-        if (!clam.HasRequiredLiquid(Api.World, Pos))
+        if (!clam.HasRequiredMedium(Api.World, Pos))
         {
             if (pausedAtHour == 0)
             {
@@ -87,7 +87,7 @@ public class BlockEntityFireclam : BlockEntity
         if (now < readyAtHour) return;
 
         string metal = clam.Variant["metal"];
-        Block ready = Api.World.GetBlock(new AssetLocation("fireclams", $"kalluclam-{shell}-ready-{metal}"));
+        Block ready = clam.GetState(Api.World, "ready", metal);
         if (ready == null) return;
 
         readyAtHour = 0;
