@@ -19,12 +19,13 @@ public class BlockFireclam : Block
         if (blockSel == null) return false;
 
         ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
-        if (Variant["stage"] == "empty" && TryGetMetal(slot, out string metal))
+        if (Variant["stage"] == "empty" && TryGetInput(slot, out string pearlType))
         {
-            if (world.Side == EnumAppSide.Server && world.Claims.TryAccess(byPlayer, blockSel.Position, EnumBlockAccessFlags.Use))
+            if (world.Side == EnumAppSide.Server && HasRequiredLiquid(world, blockSel.Position)
+                && world.Claims.TryAccess(byPlayer, blockSel.Position, EnumBlockAccessFlags.Use))
             {
                 BlockEntityFireclam entity = world.BlockAccessor.GetBlockEntity<BlockEntityFireclam>(blockSel.Position);
-                Block next = GetState(world, "processing", metal);
+                Block next = GetState(world, "processing", pearlType);
                 if (entity != null && next != null)
                 {
                     entity.StartGrowing();
@@ -61,8 +62,8 @@ public class BlockFireclam : Block
     private void Harvest(IWorldAccessor world, IPlayer player, BlockPos pos)
     {
         if (world.BlockAccessor.GetBlock(pos).BlockId != BlockId) return;
-        string metal = Variant["metal"];
-        Item pearl = world.GetItem(new AssetLocation("fireclams", "nurrupearl-" + metal));
+        string pearlType = Variant["shell"] == "clay" ? Variant["metal"] : "pearl";
+        Item pearl = world.GetItem(new AssetLocation("fireclams", "nurrupearl-" + pearlType));
         if (pearl == null) return;
 
         ItemStack stack = new(pearl);
@@ -73,7 +74,7 @@ public class BlockFireclam : Block
 
         if (world.Rand.NextDouble() < 0.5)
         {
-            world.BlockAccessor.SetBlock(0, pos);
+            world.BlockAccessor.SetBlock(0, pos, BlockLayersAccess.Solid);
         }
         else
         {
@@ -101,6 +102,23 @@ public class BlockFireclam : Block
     private Block GetState(IWorldAccessor world, string stage, string metal)
     {
         return world.GetBlock(new AssetLocation("fireclams", $"kalluclam-{Variant["shell"]}-{stage}-{metal}"));
+    }
+
+    public override bool DisplacesLiquids(IBlockAccessor blockAccess, BlockPos pos) => false;
+
+    public bool HasRequiredLiquid(IWorldAccessor world, BlockPos pos)
+    {
+        Block fluid = world.BlockAccessor.GetBlock(pos, BlockLayersAccess.Fluid);
+        EnumBlockMaterial required = Variant["shell"] == "clay" ? EnumBlockMaterial.Lava : EnumBlockMaterial.Water;
+        return fluid.IsLiquid() && fluid.BlockMaterial == required;
+    }
+
+    private bool TryGetInput(ItemSlot slot, out string pearlType)
+    {
+        if (Variant["shell"] == "clay") return TryGetMetal(slot, out pearlType);
+
+        pearlType = "pearl";
+        return slot?.Itemstack?.Block?.BlockMaterial == EnumBlockMaterial.Sand;
     }
 
     private static bool TryGetMetal(ItemSlot slot, out string metal)

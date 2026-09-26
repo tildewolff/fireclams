@@ -5,8 +5,8 @@
     "authors": [
         "Unknown"
     ],
-    "description": "Grow metal-colored nurru pearls in reusable giant clams.",
-    "version": "1.0.1",
+    "description": "Grow regular pearls in water clams and metal-colored pearls in lava clams.",
+    "version": "1.1.0",
     "dependencies": {
         "game": "1.22.0"
     }

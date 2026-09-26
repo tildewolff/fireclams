@@ -3,14 +3,45 @@
   "class": "Fireclam",
   "entityClass": "Fireclam",
   "variantgroups": [
-    { "code": "shell", "states": ["plain", "turquoise", "seafoam", "latte", "darkpurple", "clay", "cinnamon"] },
+    {
+      "code": "shell",
+      "states": [
+        "plain",
+        "turquoise",
+        "seafoam",
+        "latte",
+        "darkpurple",
+        "clay",
+        "cinnamon"
+      ]
+    },
     { "code": "stage", "states": ["empty", "processing", "ready"] },
-    { "code": "metal", "states": ["pearl", "gold", "silver", "electrum", "blackbronze", "nickel", "meteoriciron", "copper", "uranium"] }
+    {
+      "code": "metal",
+      "states": [
+        "pearl",
+        "gold",
+        "silver",
+        "electrum",
+        "blackbronze",
+        "nickel",
+        "meteoriciron",
+        "copper",
+        "uranium"
+      ]
+    }
   ],
   "skipVariants": [
-    "*-empty-gold", "*-empty-silver", "*-empty-electrum", "*-empty-blackbronze",
-    "*-empty-nickel", "*-empty-meteoriciron", "*-empty-copper", "*-empty-uranium",
-    "*-processing-pearl", "*-ready-pearl"
+    "*-empty-gold",
+    "*-empty-silver",
+    "*-empty-electrum",
+    "*-empty-blackbronze",
+    "*-empty-nickel",
+    "*-empty-meteoriciron",
+    "*-empty-copper",
+    "*-empty-uranium",
+    "kalluclam-clay-processing-pearl",
+    "kalluclam-clay-ready-pearl"
   ],
   "shapeByType": {
     "*-empty-*": { "base": "clam-open-empty" },
@@ -38,11 +69,23 @@
   "sidesolid": { "all": false },
   "emitsideao": { "all": false },
   "sideopaque": { "all": false },
-  "collisionbox": { "x1": 0.0625, "y1": 0, "z1": 0.0625, "x2": 0.9375, "y2": 0.5, "z2": 0.9375 },
+  "collisionbox": {
+    "x1": 0.0625,
+    "y1": 0,
+    "z1": 0.0625,
+    "x2": 0.9375,
+    "y2": 0.5,
+    "z2": 0.9375
+  },
   "selectionbox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.875, "z2": 1 },
   "sounds": {
     "place": "block/stone",
     "hit": "block/stone",
     "break": "block/stone"
+  },
+  "guiTransform": {
+    "rotation": { "x": -46, "y": -129, "z": -11 },
+    "origin": { "x": 0.5, "y": 0.11, "z": 0.5 },
+    "scale": 3.04
   }
 }
