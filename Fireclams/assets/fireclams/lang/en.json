@@ -4,13 +4,13 @@
   "needs-adjacent-lava": "Place this clam beside lava to grow pearls",
   "blockhelp-add-metalbit": "Add metal bit",
   "blockhelp-add-sand": "Add sand",
-  "block-kalluclam-plain-*": "Plain Kallu clam",
-  "block-kalluclam-turquoise-*": "Turquoise Kallu clam",
-  "block-kalluclam-seafoam-*": "Seafoam Kallu clam",
-  "block-kalluclam-latte-*": "Latte Kallu clam",
-  "block-kalluclam-darkpurple-*": "Dark purple Kallu clam",
-  "block-kalluclam-cinnamon-*": "Cinnamon Kallu clam",
-  "block-kalluclam-clay-*": "Fire-resistant Kallu clam",
+  "block-kalluclam*-plain-*": "Plain Kallu clam",
+  "block-kalluclam*-turquoise-*": "Turquoise Kallu clam",
+  "block-kalluclam*-seafoam-*": "Seafoam Kallu clam",
+  "block-kalluclam*-latte-*": "Latte Kallu clam",
+  "block-kalluclam*-darkpurple-*": "Dark purple Kallu clam",
+  "block-kalluclam*-cinnamon-*": "Cinnamon Kallu clam",
+  "block-kalluclam*-clay-*": "Fire-resistant Kallu clam",
 
   "item-nurrupearl-pearl": "Saltwater pearl",
   "item-nurrupearl-gold": "Fire-aspected Nurru pearl",
@@ -20,5 +20,18 @@
   "item-nurrupearl-nickel": "Air-aspected Nurru pearl",
   "item-nurrupearl-meteoriciron": "Light-aspected Nurru pearl",
   "item-nurrupearl-copper": "Earth-aspected Nurru pearl",
-  "item-nurrupearl-uranium": "Water-aspected Nurru pearl"
+  "item-nurrupearl-uranium": "Water-aspected Nurru pearl",
+
+  "item-enchantedclay-t1": "Slightly enchanted clay",
+  "item-enchantedclay-t2": "Potent enchanted clay",
+  "item-enchantedclay-t3": "Powerful enchanted clay",
+
+  "item-nurrupowder-dark": "Dark-aspected dust",
+  "item-nurrupowder-light": "Light-aspected dust",
+  "item-nurrupowder-fire": "Fire-aspected dust",
+  "item-nurrupowder-air": "Air-aspected dust",
+  "item-nurrupowder-earth": "Earth-aspected dust",
+  "item-nurrupowder-ice": "Ice-aspected dust",
+  "item-nurrupowder-thunder": "Thunder-aspected dust",
+  "item-nurrupowder-water": "Water-aspected dust"
 }
