@@ -5,8 +5,8 @@
     "authors": [
         "Unknown"
     ],
-    "description": "Grow regular pearls in saltwater clams and metal-colored pearls near lava.",
-    "version": "1.3.3",
+    "description": "Grow pearls in clams and grind metal Nurru pearls into powder.",
+    "version": "1.4.0",
     "dependencies": {
         "game": "1.22.0"
     }

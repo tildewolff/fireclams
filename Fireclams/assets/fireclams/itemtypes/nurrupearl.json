@@ -39,6 +39,16 @@
   "textures": {
     "nurru": { "base": "nurru/{type}" }
   },
+  "grindingPropsByType": {
+    "*-blackbronze": { "groundStack": { "type": "item", "code": "fireclams:nurrupowder-blackbronze", "stacksize": 1 } },
+    "*-copper": { "groundStack": { "type": "item", "code": "fireclams:nurrupowder-copper", "stacksize": 1 } },
+    "*-electrum": { "groundStack": { "type": "item", "code": "fireclams:nurrupowder-electrum", "stacksize": 1 } },
+    "*-gold": { "groundStack": { "type": "item", "code": "fireclams:nurrupowder-gold", "stacksize": 1 } },
+    "*-meteoriciron": { "groundStack": { "type": "item", "code": "fireclams:nurrupowder-meteoriciron", "stacksize": 1 } },
+    "*-nickel": { "groundStack": { "type": "item", "code": "fireclams:nurrupowder-nickel", "stacksize": 1 } },
+    "*-silver": { "groundStack": { "type": "item", "code": "fireclams:nurrupowder-silver", "stacksize": 1 } },
+    "*-uranium": { "groundStack": { "type": "item", "code": "fireclams:nurrupowder-uranium", "stacksize": 1 } }
+  },
   "attributes": {
     "groundStorageTransform": {
       "translation": { "x": 0.287, "y": -0.01, "z": -0.1 },

@@ -20,14 +20,14 @@
     {
       "code": "type",
       "states": [
-        "air",
-        "dark",
-        "earth",
-        "fire",
-        "ice",
-        "light",
-        "thunder",
-        "water"
+        "blackbronze",
+        "copper",
+        "electrum",
+        "gold",
+        "meteoriciron",
+        "nickel",
+        "silver",
+        "uranium"
       ]
     }
   ],

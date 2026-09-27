@@ -8,6 +8,8 @@ Place a clay Kallu clam directly beside lava, with one block between it and the 
 
 The empty clams come in seven shell colors in the creative inventory. Clams face the direction you are looking when placed and keep that orientation as they grow and are harvested. Hover over an empty clam to see a cycling list of accepted ingredients, or over a processing clam to see the remaining in-game hours and minutes. The processing deadline survives save and reload and advances with the game calendar.
 
+Metal Nurru pearls can be ground in a quern into their matching Nurru powder at a 1:1 ratio. Regular Nurru pearls cannot be ground.
+
 ## Build
 
 Set `VINTAGE_STORY` to the Vintage Story installation directory, then run:

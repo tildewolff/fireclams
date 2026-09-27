@@ -26,12 +26,12 @@
   "item-enchantedclay-t2": "Potent enchanted clay",
   "item-enchantedclay-t3": "Powerful enchanted clay",
 
-  "item-nurrupowder-dark": "Dark-aspected dust",
-  "item-nurrupowder-light": "Light-aspected dust",
-  "item-nurrupowder-fire": "Fire-aspected dust",
-  "item-nurrupowder-air": "Air-aspected dust",
-  "item-nurrupowder-earth": "Earth-aspected dust",
-  "item-nurrupowder-ice": "Ice-aspected dust",
-  "item-nurrupowder-thunder": "Thunder-aspected dust",
-  "item-nurrupowder-water": "Water-aspected dust"
+  "item-nurrupowder-blackbronze": "Dark-aspected dust",
+  "item-nurrupowder-meteoriciron": "Light-aspected dust",
+  "item-nurrupowder-gold": "Fire-aspected dust",
+  "item-nurrupowder-nickel": "Air-aspected dust",
+  "item-nurrupowder-copper": "Earth-aspected dust",
+  "item-nurrupowder-silver": "Ice-aspected dust",
+  "item-nurrupowder-electrum": "Thunder-aspected dust",
+  "item-nurrupowder-uranium": "Water-aspected dust"
 }
