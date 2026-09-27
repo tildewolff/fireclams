@@ -1,0 +1,127 @@
+[
+  {
+    "ingredientPattern": "CC",
+    "ingredients": {
+      "C": {
+        "type": "block",
+        "code": "game:seashell-*-latte",
+        "quantity": 1
+      }
+    },
+    "width": 2,
+    "height": 1,
+    "output": {
+      "type": "block",
+      "code": "fireclams:kalluclamrot-latte-empty-pearl-north"
+    }
+  },
+  {
+    "ingredientPattern": "CC",
+    "ingredients": {
+      "C": {
+        "type": "block",
+        "code": "game:seashell-*-plain",
+        "quantity": 1
+      }
+    },
+    "width": 2,
+    "height": 1,
+    "output": {
+      "type": "block",
+      "code": "fireclams:kalluclamrot-plain-empty-pearl-north"
+    }
+  },
+  {
+    "ingredientPattern": "CC",
+    "ingredients": {
+      "C": {
+        "type": "block",
+        "code": "game:seashell-*-seafoam",
+        "quantity": 1
+      }
+    },
+    "width": 2,
+    "height": 1,
+    "output": {
+      "type": "block",
+      "code": "fireclams:kalluclamrot-seafoam-empty-pearl-north"
+    }
+  },
+  {
+    "ingredientPattern": "CC",
+    "ingredients": {
+      "C": {
+        "type": "block",
+        "code": "game:seashell-*-darkpurple",
+        "quantity": 1
+      }
+    },
+    "width": 2,
+    "height": 1,
+    "output": {
+      "type": "block",
+      "code": "fireclams:kalluclamrot-darkpurple-empty-pearl-north"
+    }
+  },
+  {
+    "ingredientPattern": "CC",
+    "ingredients": {
+      "C": {
+        "type": "block",
+        "code": "game:seashell-*-cinnamon",
+        "quantity": 1
+      }
+    },
+    "width": 2,
+    "height": 1,
+    "output": {
+      "type": "block",
+      "code": "fireclams:kalluclamrot-cinnamon-empty-pearl-north"
+    }
+  },
+  {
+    "ingredientPattern": "CC",
+    "ingredients": {
+      "C": {
+        "type": "block",
+        "code": "game:seashell-*-turquoise",
+        "quantity": 1
+      }
+    },
+    "width": 2,
+    "height": 1,
+    "output": {
+      "type": "block",
+      "code": "fireclams:kalluclamrot-turquoise-empty-pearl-north"
+    }
+  },
+  {
+    "ingredientPattern": "AAA,AXA,AAA",
+    "ingredients": {
+      "A": {
+        "type": "item",
+        "code": "game:clay-fire",
+        "quantity": 1
+      },
+      "X": {
+        "type": "block",
+        "code": "fireclams:kalluclamrot-*-empty-pearl-north",
+        "allowedVariants": [
+          "latte",
+          "plain",
+          "cinnamon",
+          "seafoam",
+          "darkpurple",
+          "turquoise"
+        ],
+        "quantity": 1
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "block",
+      "code": "fireclams:kalluclamrot-clay-empty-pearl-north"
+    }
+  }
+]

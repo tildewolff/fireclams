@@ -1,13 +1,8 @@
 {
-    "type": "code",
-    "modid": "fireclams",
-    "name": "Fireclams",
-    "authors": [
-        "Unknown"
-    ],
-    "description": "Grow pearls in clams and grind metal Nurru pearls into powder.",
-    "version": "1.4.2",
-    "dependencies": {
-        "game": "1.22.0"
-    }
+  "type": "code",
+  "modid": "fireclams",
+  "name": "Fireclams",
+  "authors": ["Chiruda"],
+  "description": "Grow elementally-aspected pearls in large clams and craft magical clays from them",
+  "version": "1.0.1"
 }

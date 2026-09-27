@@ -8,7 +8,7 @@ namespace Fireclams;
 
 public class BlockFireclam : Block
 {
-    private const float HarvestSeconds = 1.25f;
+    private const float HarvestSeconds = 5f;
     private const string HarvestAnimation = "knifecut";
     private static readonly string[] MetalOptions =
     {
@@ -48,14 +48,16 @@ public class BlockFireclam : Block
         if (world.Side == EnumAppSide.Client)
         {
             byPlayer.Entity.StartAnimation(HarvestAnimation);
-            FireclamsModSystem.HarvestProgress?.Show(0);
+            FireclamsModSystem.HarvestProgress?.Show(0, blockSel.Position);
         }
         return true;
     }
 
     public override bool OnBlockInteractStep(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
     {
-        if (Variant["stage"] != "ready" || !IsKnife(byPlayer.InventoryManager.ActiveHotbarSlot))
+        if (blockSel == null || Variant["stage"] != "ready"
+            || world.BlockAccessor.GetBlock(blockSel.Position).BlockId != BlockId
+            || !IsKnife(byPlayer.InventoryManager.ActiveHotbarSlot))
         {
             EndHarvestVisuals(world, byPlayer);
             return false;
@@ -63,8 +65,9 @@ public class BlockFireclam : Block
         if (world.Side == EnumAppSide.Client)
         {
             byPlayer.Entity.StartAnimation(HarvestAnimation);
-            FireclamsModSystem.HarvestProgress?.Show(Math.Min(secondsUsed / HarvestSeconds, 1));
+            FireclamsModSystem.HarvestProgress?.Show(Math.Min(secondsUsed / HarvestSeconds, 1), blockSel.Position);
         }
+        if (secondsUsed >= HarvestSeconds) EndHarvestVisuals(world, byPlayer);
         return secondsUsed < HarvestSeconds;
     }
 
