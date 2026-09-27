@@ -9,6 +9,7 @@ namespace Fireclams;
 public class BlockFireclam : Block
 {
     private const float HarvestSeconds = 1.25f;
+    private const string HarvestAnimation = "knifecut";
     private static readonly string[] MetalOptions =
     {
         "gold", "silver", "electrum", "blackbronze", "nickel",
@@ -43,23 +44,52 @@ public class BlockFireclam : Block
             return true;
         }
 
-        return Variant["stage"] == "ready" && IsKnife(slot);
+        if (Variant["stage"] != "ready" || !IsKnife(slot)) return false;
+        if (world.Side == EnumAppSide.Client)
+        {
+            byPlayer.Entity.StartAnimation(HarvestAnimation);
+            FireclamsModSystem.HarvestProgress?.Show(0);
+        }
+        return true;
     }
 
     public override bool OnBlockInteractStep(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
     {
-        if (Variant["stage"] != "ready" || !IsKnife(byPlayer.InventoryManager.ActiveHotbarSlot)) return false;
+        if (Variant["stage"] != "ready" || !IsKnife(byPlayer.InventoryManager.ActiveHotbarSlot))
+        {
+            EndHarvestVisuals(world, byPlayer);
+            return false;
+        }
+        if (world.Side == EnumAppSide.Client)
+        {
+            byPlayer.Entity.StartAnimation(HarvestAnimation);
+            FireclamsModSystem.HarvestProgress?.Show(Math.Min(secondsUsed / HarvestSeconds, 1));
+        }
         return secondsUsed < HarvestSeconds;
     }
 
     public override void OnBlockInteractStop(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
     {
+        EndHarvestVisuals(world, byPlayer);
         if (secondsUsed < HarvestSeconds || blockSel == null || Variant["stage"] != "ready") return;
         if (!IsKnife(byPlayer.InventoryManager.ActiveHotbarSlot)) return;
         if (world.Side == EnumAppSide.Server && world.Claims.TryAccess(byPlayer, blockSel.Position, EnumBlockAccessFlags.Use))
         {
             Harvest(world, byPlayer, blockSel.Position);
         }
+    }
+
+    public override bool OnBlockInteractCancel(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, EnumItemUseCancelReason cancelReason)
+    {
+        EndHarvestVisuals(world, byPlayer);
+        return true;
+    }
+
+    private static void EndHarvestVisuals(IWorldAccessor world, IPlayer player)
+    {
+        if (world.Side != EnumAppSide.Client) return;
+        player.Entity.StopAnimation(HarvestAnimation);
+        FireclamsModSystem.HarvestProgress?.Hide();
     }
 
     private void Harvest(IWorldAccessor world, IPlayer player, BlockPos pos)

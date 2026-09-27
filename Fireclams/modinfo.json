@@ -6,7 +6,7 @@
         "Unknown"
     ],
     "description": "Grow pearls in clams and grind metal Nurru pearls into powder.",
-    "version": "1.4.0",
+    "version": "1.4.2",
     "dependencies": {
         "game": "1.22.0"
     }

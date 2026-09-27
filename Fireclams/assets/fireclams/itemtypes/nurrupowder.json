@@ -42,6 +42,7 @@
     "groundStorageTransform": {
       "translation": { "x": 0.287, "y": -0.01, "z": -0.1 },
       "rotation": { "x": 0, "y": 28, "z": 0 },
+      "origin": { "x": 0.4, "y": 0.1, "z": 1.1 },
       "scale": 0.86
     },
     "displayable": {
@@ -58,14 +59,27 @@
     "items": ["*"]
   },
   "guiTransform": {
-    "rotation": { "x": 130, "y": -115, "z": -114 },
-    "origin": { "x": 0.68, "y": 0.38, "z": 0.4 },
-    "scale": 6
+    "translation": { "x": 0, "y": 0, "z": -25 },
+    "rotation": { "x": 171, "y": 57, "z": -20 },
+    "origin": { "x": 0.46, "y": 0.08, "z": 0.48 },
+    "scale": 2.75
+  },
+  "tpHandTransform": {
+    "translation": { "x": -0.04, "y": -0.6, "z": -0.8 },
+    "rotation": { "x": 119, "y": -7, "z": -72 },
+    "origin": { "x": -0.1, "y": 0.32, "z": 0.82 },
+    "scale": 0.48
   },
   "groundTransform": {
-    "translation": { "x": 0, "y": 0.05, "z": 0 },
+    "translation": { "x": 0, "y": 0, "z": 0 },
     "rotation": { "x": 0, "y": 0, "z": 0 },
     "origin": { "x": 0.5, "y": 0, "z": 0.5 },
-    "scale": 3.4
+    "scale": 3
+  },
+  "heldRightReadyAnimationByType": {
+    "*": "holdbothhands"
+  },
+  "heldTpIdleAnimationByType": {
+    "*": "holdbothhands"
   }
 }

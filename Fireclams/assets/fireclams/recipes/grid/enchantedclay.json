@@ -1,0 +1,150 @@
+[
+  {
+    "ingredientPattern": "AXB,XZX,CXD",
+    "ingredients": {
+      "A": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-gold",
+        "quantity": 1
+      },
+      "B": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-copper",
+        "quantity": 1
+      },
+      "C": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-uranium",
+        "quantity": 1
+      },
+      "D": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-nickel",
+        "quantity": 1
+      },
+      "X": {
+        "type": "item",
+        "code": "game:metalbit-tinbronze",
+        "quantity": 1
+      },
+      "Z": {
+        "type": "item",
+        "code": "game:clay-blue",
+        "quantity": 8
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "item",
+      "code": "fireclams:enchantedclay-t1"
+    }
+  },
+  {
+    "ingredientPattern": "AXB,CZD,EXF",
+    "ingredients": {
+      "A": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-blackbronze",
+        "quantity": 1
+      },
+      "B": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-meteoriciron",
+        "quantity": 1
+      },
+      "C": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-silver",
+        "quantity": 1
+      },
+      "D": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-electrum",
+        "quantity": 1
+      },
+      "E": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-gold",
+        "quantity": 1
+      },
+      "F": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-uranium",
+        "quantity": 1
+      },
+      "X": {
+        "type": "item",
+        "code": "game:metalbit-iron",
+        "quantity": 2
+      },
+      "Z": {
+        "type": "item",
+        "code": "game:clay-blue",
+        "quantity": 8
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "item",
+      "code": "fireclams:enchantedclay-t2"
+    }
+  },
+  {
+    "ingredientPattern": "ABC,DZE,FXG",
+    "ingredients": {
+      "A": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-blackbronze",
+        "quantity": 1
+      },
+      "B": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-uranium",
+        "quantity": 1
+      },
+      "C": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-meteoriciron",
+        "quantity": 1
+      },
+      "D": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-gold",
+        "quantity": 1
+      },
+      "E": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-electrum",
+        "quantity": 1
+      },
+      "F": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-copper",
+        "quantity": 1
+      },
+      "G": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-nickel",
+        "quantity": 1
+      },
+      "X": {
+        "type": "item",
+        "code": "game:metalbit-steel",
+        "quantity": 4
+      },
+      "Z": {
+        "type": "item",
+        "code": "game:clay-blue",
+        "quantity": 8
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "item",
+      "code": "fireclams:enchantedclay-t3"
+    }
+  }
+]

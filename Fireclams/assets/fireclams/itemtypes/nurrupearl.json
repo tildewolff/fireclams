@@ -40,14 +40,62 @@
     "nurru": { "base": "nurru/{type}" }
   },
   "grindingPropsByType": {
-    "*-blackbronze": { "groundStack": { "type": "item", "code": "fireclams:nurrupowder-blackbronze", "stacksize": 1 } },
-    "*-copper": { "groundStack": { "type": "item", "code": "fireclams:nurrupowder-copper", "stacksize": 1 } },
-    "*-electrum": { "groundStack": { "type": "item", "code": "fireclams:nurrupowder-electrum", "stacksize": 1 } },
-    "*-gold": { "groundStack": { "type": "item", "code": "fireclams:nurrupowder-gold", "stacksize": 1 } },
-    "*-meteoriciron": { "groundStack": { "type": "item", "code": "fireclams:nurrupowder-meteoriciron", "stacksize": 1 } },
-    "*-nickel": { "groundStack": { "type": "item", "code": "fireclams:nurrupowder-nickel", "stacksize": 1 } },
-    "*-silver": { "groundStack": { "type": "item", "code": "fireclams:nurrupowder-silver", "stacksize": 1 } },
-    "*-uranium": { "groundStack": { "type": "item", "code": "fireclams:nurrupowder-uranium", "stacksize": 1 } }
+    "*-blackbronze": {
+      "groundStack": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-blackbronze",
+        "stacksize": 1
+      }
+    },
+    "*-copper": {
+      "groundStack": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-copper",
+        "stacksize": 1
+      }
+    },
+    "*-electrum": {
+      "groundStack": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-electrum",
+        "stacksize": 1
+      }
+    },
+    "*-gold": {
+      "groundStack": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-gold",
+        "stacksize": 1
+      }
+    },
+    "*-meteoriciron": {
+      "groundStack": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-meteoriciron",
+        "stacksize": 1
+      }
+    },
+    "*-nickel": {
+      "groundStack": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-nickel",
+        "stacksize": 1
+      }
+    },
+    "*-silver": {
+      "groundStack": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-silver",
+        "stacksize": 1
+      }
+    },
+    "*-uranium": {
+      "groundStack": {
+        "type": "item",
+        "code": "fireclams:nurrupowder-uranium",
+        "stacksize": 1
+      }
+    }
   },
   "attributes": {
     "groundStorageTransform": {
@@ -78,5 +126,11 @@
     "rotation": { "x": 0, "y": 0, "z": 0 },
     "origin": { "x": 0.5, "y": 0, "z": 0.5 },
     "scale": 3.4
+  },
+  "tpHandTransform": {
+    "translation": { "x": -0.84, "y": -1.71, "z": 0.01 },
+    "rotation": { "x": 111, "y": -97, "z": 65 },
+    "origin": { "x": -1.1, "y": 0.9, "z": -1.3 },
+    "scale": 0.89
   }
 }

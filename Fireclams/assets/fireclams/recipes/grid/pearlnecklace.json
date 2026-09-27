@@ -1,0 +1,23 @@
+[
+  {
+    "ingredientPattern": "T_T,P_P,PPP",
+    "ingredients": {
+      "T": {
+        "type": "item",
+        "code": "game:flaxtwine",
+        "quantity": 1
+      },
+      "P": {
+        "type": "item",
+        "code": "fireclams:nurrupearl-pearl",
+        "quantity": 2
+      }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+      "type": "item",
+      "code": "game:clothes-neck-pearl-necklace"
+    }
+  }
+]
